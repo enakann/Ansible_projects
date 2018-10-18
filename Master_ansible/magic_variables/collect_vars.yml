@@ -1,0 +1,18 @@
+- hosts: all
+  tasks: 
+     - name: using template create a remote file that contains all variables available to the play
+       template:
+         src: templates/dump_variables
+         dest: /tmp/ansible_variables
+
+     - name: Fetch the templated file with all variable to control host
+       fetch:
+         src: /tmp/ansible_variables
+         dest: "captured_variables/{{ inventory_hostname }}"
+         flat: yes
+
+
+     - name: Clean up left over files
+       file:
+          name: /temp/ansible_variables
+          state: absent

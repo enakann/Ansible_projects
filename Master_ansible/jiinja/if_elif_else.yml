@@ -1,0 +1,27 @@
+- hosts: all
+  gather_facts: true
+  tasks:
+    - name: hostname
+      debug:
+       msg: "{{ ansible_hostname }}"
+ 
+
+    - name: jinja if 
+      debug:
+        msg: >
+            {% if ansible_hostname == "diyvb2" -%}
+              this is diyvb2
+            {% elif ansible_hostname == "server1" -%}
+              ths is controlserver
+            {% else -%}
+              this is {{ ansible_hostname }} 
+            {% endif %}
+    - name: check if variable is defined
+      debug:
+         msg: >
+           {% set example_variable = "exisit" -%}
+           {% if example_variable is defined -%}
+              example_variable is defined
+           {% else -%}
+             example_variable is not defined
+           {% endif %}

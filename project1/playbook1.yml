@@ -1,0 +1,8 @@
+- name: First play book
+  hosts: ubuntu
+  tasks:
+    - name: test
+      file:
+        dest: /tmp/foo
+        state: touch
+        

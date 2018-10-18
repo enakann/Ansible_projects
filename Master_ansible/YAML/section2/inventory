@@ -1,0 +1,7 @@
+[centos]
+centosvm ansible_host=192.168.33.7 ansible_user=navi ansible_password=navi
+centosgui ansible_host=192.168.33.8 ansible_user=navi ansible_password=navi
+
+[ubuntu]
+j2bb ansible_host=192.168.33.6 ansible_user=diyuser2 ansible_password=diyuser2
+ubuntu_ldap ansible_host=192.168.33.4 ansible_user=navi ansible_password=navi

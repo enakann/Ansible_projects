@@ -1,0 +1,29 @@
+---
+ - name: playbook
+   hosts: all
+   gather_facts: false
+   vars:
+     example_key1: "{{ hostvars[inventory_hostname]['backup_tools'][1] }}"
+     
+     example_key2: "{{ dirvish_master  }}"
+     gitp: "{{ git_repo }}"
+
+   tasks:
+     - name: debug1
+       debug: 
+         var: example_key1
+     - name: debug2
+       debug: 
+         var:  example_key2
+     - name: group_vars_al
+       debug:
+         var: gitp
+     - name: host_var_demo
+       debug:
+         var: "{{ server_name }}"
+
+     - name: group_var_demo
+       debug:
+         var: "{{ os_version }}" 
+     - debug:
+         var : "{{ hostvars[inventory_hostname]['dirvish_master'] }}"

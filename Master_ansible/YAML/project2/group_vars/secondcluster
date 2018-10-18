@@ -1,0 +1,5 @@
+vips:
+  - name: cluster2_vip
+    ip: 1.2.4.4
+  - name: cluster2.othervip
+    ip: 1.2.4.5

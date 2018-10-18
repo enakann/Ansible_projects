@@ -1,0 +1,19 @@
+- aston:
+     year: 1912
+     website: astonmatring.com
+     founded_by:
+       - test1
+       - test2
+     
+- fiat:
+     year: 1899
+     website: fiat.com
+     founded_by:
+       - test3
+       - test4
+- ford:
+     year: 1900
+     website: ford.com
+     founder_by:
+       - test5
+       - test6

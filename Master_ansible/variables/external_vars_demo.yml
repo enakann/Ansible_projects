@@ -1,0 +1,32 @@
+- hosts: ubuntu
+  gather_facts: false
+  vars_files:
+    - external_vars.yml
+  tasks:
+    - name: direct key 
+      debug:
+        msg: key1 
+    - name: Test named
+      debug:
+       msg: "{{ dict1 }}"
+    - name: Test dictionary with dot notation
+      debug:
+        msg: "{{ dict1.dict_key }}"
+    - name: Test dictionary with python brackets notation
+      debug:
+        msg: "{{ dict1['dict_key'] }}"
+    - name: Test for all hosts
+      debug:
+       msg: "{{ dict2 }}"
+    - name: test for inline dict
+      debug:
+        msg: "{{ inline_dict.0.key1 }}"
+    - name: test the list
+      debug:
+        msg: "{{ item }}"
+      with_items: "{{ lista }}"
+
+                           
+
+
+

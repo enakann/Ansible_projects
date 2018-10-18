@@ -1,0 +1,9 @@
+- name: give users access to multiple db
+  mysql_user:
+    name: "{{ item[0] }}"
+    priv: "{{ item[1] }}"
+    append_privs: yes
+    password: "foo"
+  with_nested:
+    - [ 'linda','lisa']
+    - [ 'clientdb','employeedb','providerdb']

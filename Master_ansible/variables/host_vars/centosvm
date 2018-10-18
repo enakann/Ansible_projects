@@ -1,0 +1,20 @@
+backup_tools:
+  - backup_files
+  - backup_home
+  - disk_backup_dirvish
+  - find_duplicates
+  - report_df
+  - reset_cronlog
+  - restart_apcmon
+  - sudo_dirvish
+  - rsync-new
+  - test2
+dirvish_master: divi
+
+hourly_jobs:
+ - check_raid
+ - check_space
+
+daily_jobs: []
+
+server_name: server1

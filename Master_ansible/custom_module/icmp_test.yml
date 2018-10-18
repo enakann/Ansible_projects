@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+    - name: test ping
+      icmpy:
+        target: 127.0.0.1
+

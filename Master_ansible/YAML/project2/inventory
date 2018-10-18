@@ -1,0 +1,7 @@
+[firstcluster]
+node10
+node11
+
+[secondcluster]
+node20
+node21

@@ -1,0 +1,11 @@
+- hosts: centos
+  tasks: 
+    - name: Task1
+      command: /bin/sleep 1
+
+    - name: Task1
+      command: /bin/sleep 1
+
+    - name: Task1
+      command: /bin/sleep 1
+

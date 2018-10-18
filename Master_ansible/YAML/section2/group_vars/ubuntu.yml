@@ -1,0 +1,21 @@
+backup_tools:
+  - backup_files
+  - backup_home
+  - disk_backup_dirvish
+  - find_duplicates
+  - report_df
+  - reset_cronlog
+  - restart_apcmon
+  - sudo_dirvish
+  - rsync-new
+  - ubuntu
+
+dirvish_master: False
+
+hourly_jobs:
+ - check_raid
+ - check_space
+
+daily_jobs: []
+
+os_version: ubun

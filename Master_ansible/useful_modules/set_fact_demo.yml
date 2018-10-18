@@ -1,0 +1,9 @@
+- hosts: all
+  tasks:
+   - name: test1
+     set_fact:
+        our_fact: Ansible rocks
+        ansible_distribution: "{{ ansible_distribution | upper }}"
+   - name: show fact
+     debug:
+        msg: out_fact:{{ our_fact }} and ansible_dis:{{ ansible_distribution}}

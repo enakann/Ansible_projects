@@ -1,0 +1,8 @@
+- hosts: linux
+  tasks:
+    - name: groupvar missing from one group
+      debug:
+        msg: "{{ extra }}"
+    - name : group var in both groups
+      debug:
+        msg: "{{ only | default('') }}"

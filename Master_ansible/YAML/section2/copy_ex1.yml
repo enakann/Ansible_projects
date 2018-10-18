@@ -1,0 +1,9 @@
+- hosts: all
+  tasks:
+    - copy:
+        content: "This is {{ server_name }} "
+        dest: /tmp/section2.txt
+    - shell: cat /tmp/section2.txt
+      register: output
+    - debug:
+         var: output 

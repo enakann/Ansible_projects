@@ -1,0 +1,28 @@
+- hosts: all
+  tasks:
+    - name: Install patch and python-dns
+      become: true
+      block:
+        - name: Install patch
+          package:
+            name: patch
+        - name: Install python-dnspython
+          package:
+            name: python-dnspython
+      when: inventory_hostname != 'j2bb'
+       
+      
+      rescue:
+        - name: Rollback patch
+          package:
+            name: patch
+            state: absent
+
+        - name: Rollback python-dnspython
+          package:
+            name: python-dnspython
+            state: absent
+
+      always:
+        - debug:
+            msg: This always run,regardless

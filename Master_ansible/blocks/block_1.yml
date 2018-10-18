@@ -1,0 +1,16 @@
+- hosts: all
+  tasks:
+    - name: block demo
+      block:
+        - name: Example centos
+          debug:
+            msg: Example centos only
+          when: ansible_distribution == 'CentOS'
+        - name: Example ubuntu only
+          debug:
+            msg: Example ubuntu only
+          when: ansible_distribution == 'Ubuntu'
+        - name: Exampe 3 with items
+          debug:
+            msg: "Example with items - {{ item }}"
+          with_items: ['a','b','c']

@@ -1,0 +1,15 @@
+
+key1: value1
+dict1:
+   dict_key: this is a dictionary value
+dict2:
+   dict_key: this is a second dictionary value
+inline_dict:
+    - { key1: value1,key2: value2}
+    - { key1: value3,key2: value4}
+lista:
+      [item1,item2,item3,item4]
+listb:
+   - itema
+   - itemb
+   - itemc

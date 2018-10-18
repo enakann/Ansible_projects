@@ -1,0 +1,35 @@
+- hosts: all
+  tasks:
+    - name: Task1
+      command: /bin/sleep 4
+      async: 10
+      poll: 0
+      when: inventory_hostname == 'centosvm'
+      register: result1
+   
+    - name: Task2
+      command: /bin/sleep 4
+      async: 10
+      poll: 0
+      when: inventory_hostname == 'centosgui'
+      register: result2
+
+
+    - name: Task3
+      command: /bin/sleep 4
+      async: 10
+      poll: 0
+      when: inventory_hostname == 'j2bb'
+      register: result3
+    - name: Task4
+      command: /bin/sleep 30
+      async: 10
+      poll: 0
+      when: inventory_hostname == 'ubuntu_ldap'
+      register: result4
+    - name: Task5
+      debug:
+        var: result1
+    - name: Task6
+      debug:
+        msg: "{{ result1 }}"

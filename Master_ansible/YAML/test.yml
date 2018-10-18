@@ -1,0 +1,17 @@
+---
+ - name: playbook
+   hosts: all
+   vars:
+     example_key1: | 
+        this is a
+        multiple line {{ inventory_hostname }}
+        example string
+     example_key2: "{{ ansible_hostname }}"
+
+   tasks:
+     - name: debug1
+       debug: 
+         var: example_key1
+     - name: debug2
+       debug: 
+         var:  example_key2

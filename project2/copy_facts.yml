@@ -1,0 +1,19 @@
+---
+- name: Install remote facts
+  hosts: all
+  #remote_user: test
+  become: true
+  become_method: sudo
+  vars:
+    remote_dir: /tmp/divya
+    facts_file: custom.fact
+  tasks:
+    - name: Create remote directory
+      file:
+        state: directory
+        recurse: yes
+        path: "{{ remote_dir }}"
+    - name: install new facts
+      copy:
+        src: "{{ facts_file }}"
+        dest: "{{ remote_dir }}"

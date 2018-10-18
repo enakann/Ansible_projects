@@ -1,0 +1,8 @@
+http_port: 80
+https_port: 443
+ntpserver: us.pool.ntp.org
+git_repo: http://github.com/xxx/mywebapp.git
+sudo_user: joe
+opt_bin: /opt/bin
+opt_log: /opt/log
+maven_url: http://www.eng.lsu.edu/3.0/binaries/apache-maven-3.0.5-bin.tar.gz

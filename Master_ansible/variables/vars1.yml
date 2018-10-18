@@ -1,0 +1,39 @@
+- hosts: ubuntu
+  gather_facts: false
+  vars:
+    dict1:
+      dict_key: this is a dictionary value
+  tasks:
+    - name: Test named  
+      debug:
+       msg: "{{ dict1 }}"
+    - name: Test dictionary with dot notation
+      debug:
+        msg: "{{ dict1.dict_key }}"
+    - name: Test dictionary with python brackets notation
+      debug:
+        msg: "{{ dict1['dict_key'] }}"
+
+- hosts: centos
+  gather_facts: false
+  vars:
+    dict2:
+      dict_key: this is a second dictionary value
+    inline_dict:
+        - { key1: value1,key2: value2}
+        - { key1: value3,key2: value4}
+    lista:
+      [item1,item2,item3,item4]
+
+  tasks:
+    - name: Test for all hosts
+      debug:
+       msg: "{{ dict2 }}"
+    - name: test for inline dict
+      debug:
+        #msg: "{{ item.key1}},{{ item.key2}}"
+        msg: "{{ inline_dict.0.key1 }}"
+    - name: test the list
+      debug:
+        msg: "{{ item }}"
+      with_items: "{{ lista }}"

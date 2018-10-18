@@ -1,0 +1,11 @@
+[all]
+192.168.33.7 ansible_user=navi ansible_password=navi ansible_sudo_pass=navi
+192.168.33.8 ansible_user=navi ansible_password=navi ansible_sudo_pass=navi
+
+[lamp]
+192.168.33.6 ansible_user=diyuser2 ansible_password=diyuser2 ansible_sudo_pass=diyuser2
+
+[file]
+192.168.33.4 ansible_user=navi ansible_password=navi ansible_sudo_pass=navi
+
+

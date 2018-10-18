@@ -1,0 +1,6 @@
+- hosts: centos
+  tasks:
+     - name: fetch files
+       fetch:
+         src: /etc/redhat-release
+         dest: /tmp/redhat-release

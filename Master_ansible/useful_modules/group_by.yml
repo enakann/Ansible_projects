@@ -1,0 +1,16 @@
+- hosts: all
+  tasks:
+    - name: groupby demo
+      group_by:
+        key: "custom_{{ ansible_distribution | lower }}"
+
+
+- hosts: custom_centos
+  tasks:
+    - name: ping all in custom_centos
+      ping:
+
+- hosts: custom_ubuntu
+  tasks:
+    - name: ping all in custom_ubuntu
+      ping:

@@ -1,0 +1,8 @@
+- hosts: ubuntu
+  gather_facts: false
+  vars_prompt:
+    - name: username
+  tasks:
+    - name: Test vars_promt
+      debug:
+        msg: "{{ username }}"

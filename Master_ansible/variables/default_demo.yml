@@ -1,0 +1,8 @@
+- hosts: all
+  gather_facts: true
+  tasks:
+    - name: test hostvars
+      debug:
+        msg: "{{ hostvars[inventory_hostname]['fuck'] | default('') }}"
+      when:  inventory_hostname == "centosgui" 
+      

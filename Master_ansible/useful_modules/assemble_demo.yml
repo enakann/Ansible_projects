@@ -1,0 +1,7 @@
+- hosts: centosgui
+  tasks:
+    - name: assemble files
+      assemble:
+        src: /home/navi/Desktop
+        dest: /home/navi/Desktop/mergedfiles.txt
+

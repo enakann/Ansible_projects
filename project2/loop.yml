@@ -1,0 +1,11 @@
+- name: create users
+  hosts: all
+  tasks:
+    - user:
+        name: "{{ item.name }}"
+        state: present
+        groups: "{{ item.groups }}"
+      with_items:
+        - { name: 'linda',groups: 'wheel' }
+        - { name: 'lisa', groups: 'root' }
+

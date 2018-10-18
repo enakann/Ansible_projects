@@ -1,0 +1,7 @@
+- hosts: centosvm,centosgui
+  tasks:
+    - name: prompt uset to verify before continue
+      pause:
+        prompt: please check that the webserver is running ,press enter to continur
+
+

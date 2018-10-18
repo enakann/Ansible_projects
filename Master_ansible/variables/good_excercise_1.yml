@@ -1,0 +1,36 @@
+- hosts: all
+  gather_facts: True
+  vars:
+     files:
+      - file1
+      - file2
+  tasks:
+    - name: Copying file and using host_vars
+      copy:
+        content: "This is {{ server_name }} "
+        dest: /tmp/section_{{ inventory_hostname }}{{ item }}.txt
+      notify: MOTD changed
+      when: ansible_distribution == "Ubuntu"
+      with_items: "{{ files }}"
+     
+    - name: get the output of the file
+      shell: cat /tmp/section_{{inventory_hostname}}{{item}}.txt
+      register: output
+      with_items: "{{ files }}"
+
+    - name: fetch those file
+      fetch:
+        src: /tmp/section_{{inventory_hostname}}{{item}}.txt
+        dest: /tmp/section_{{inventory_hostname}}{{item}}.txt
+        flat: true
+      with_items: "{{ files }}"
+    
+    - debug:
+         var: output 
+
+
+  handlers:
+    - name: MOTD changed
+      debug:
+        msg: the MOTD was changed
+       

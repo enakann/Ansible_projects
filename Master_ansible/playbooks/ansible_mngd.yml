@@ -1,0 +1,5 @@
+- hosts: all
+  tasks:
+   - name: ansble mngd
+     debug:
+       msg: "{{ ansible_managed }}"

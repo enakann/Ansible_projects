@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+    - name: test host
+      debug:
+        msg: "{{ inventory_hostname }}"
+      when: inventory_hostname != 'j2bb'

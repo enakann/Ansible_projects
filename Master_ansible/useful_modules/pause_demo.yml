@@ -1,0 +1,5 @@
+- hosts: centosvm,centosgui
+  tasks:
+    - name: pause playbook for 10 sec
+      pause:
+        seconds: 2 
