@@ -1,0 +1,181 @@
+2018-10-18 14:12:29,405 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2018-10-18 14:12:29,420 p=16740 u=navi |  PLAY [all] **************************************************************************************************************************************************
+2018-10-18 14:12:29,446 p=16740 u=navi |  TASK [Gathering Facts] **************************************************************************************************************************************
+2018-10-18 14:12:32,572 p=16740 u=navi |  ok: [centosvm]
+2018-10-18 14:12:32,799 p=16740 u=navi |  fatal: [j2bb]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.33.6 port 22: No route to host\r\n", "unreachable": true}
+2018-10-18 14:12:33,037 p=16740 u=navi |  ok: [ubuntu_ldap]
+2018-10-18 14:12:33,110 p=16740 u=navi |  ok: [centosgui]
+2018-10-18 14:12:33,173 p=16740 u=navi |  TASK [test hostvars] ****************************************************************************************************************************************
+2018-10-18 14:12:33,436 p=16740 u=navi |  skipping: [centosvm]
+2018-10-18 14:12:33,507 p=16740 u=navi |  skipping: [ubuntu_ldap]
+2018-10-18 14:12:33,570 p=16740 u=navi |  ok: [centosgui] => {
+    "msg": [
+        "192.168.33.8", 
+        "10.0.2.15", 
+        "192.168.122.1"
+    ]
+}
+2018-10-18 14:12:33,575 p=16740 u=navi |  	to retry, use: --limit @/home/navi/ansible_project/Master_ansible/variables/hostvars_demo.retry
+
+2018-10-18 14:12:33,576 p=16740 u=navi |  PLAY RECAP **************************************************************************************************************************************************
+2018-10-18 14:12:33,577 p=16740 u=navi |  centosgui                  : ok=2    changed=0    unreachable=0    failed=0   
+2018-10-18 14:12:33,577 p=16740 u=navi |  centosvm                   : ok=1    changed=0    unreachable=0    failed=0   
+2018-10-18 14:12:33,577 p=16740 u=navi |  j2bb                       : ok=0    changed=0    unreachable=1    failed=0   
+2018-10-18 14:12:33,577 p=16740 u=navi |  ubuntu_ldap                : ok=1    changed=0    unreachable=0    failed=0   
+2018-10-18 14:14:27,425 p=16978 u=navi |  ansible-playbook 2.7.0
+  config file = /home/navi/ansible_project/Master_ansible/variables/ansible.cfg
+  configured module search path = [u'/home/navi/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Jul 13 2018, 13:06:57) [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+2018-10-18 14:14:27,426 p=16978 u=navi |  Using /home/navi/ansible_project/Master_ansible/variables/ansible.cfg as config file
+2018-10-18 14:14:27,426 p=16978 u=navi |  setting up inventory plugins
+2018-10-18 14:14:27,479 p=16978 u=navi |  Parsed /home/navi/ansible_project/Master_ansible/variables/inventory inventory source with ini plugin
+2018-10-18 14:14:27,828 p=16978 u=navi |  Loading callback plugin default of type stdout, v2.0 from /usr/lib/python2.7/site-packages/ansible/plugins/callback/default.pyc
+2018-10-18 14:14:28,191 p=16978 u=navi |  PLAYBOOK: hostvars_demo.yml *********************************************************************************************************************************
+2018-10-18 14:14:28,191 p=16978 u=navi |  1 plays in hostvars_demo.yml
+2018-10-18 14:14:28,283 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2018-10-18 14:14:28,301 p=16978 u=navi |  PLAY [all] **************************************************************************************************************************************************
+2018-10-18 14:14:28,328 p=16978 u=navi |  TASK [Gathering Facts] **************************************************************************************************************************************
+2018-10-18 14:14:28,331 p=16978 u=navi |  task path: /home/navi/ansible_project/Master_ansible/variables/hostvars_demo.yml:1
+2018-10-18 14:14:31,625 p=16978 u=navi |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-10-18 14:14:31,631 p=16978 u=navi |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-10-18 14:14:31,642 p=16978 u=navi |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-10-18 14:14:31,822 p=16978 u=navi |  fatal: [j2bb]: UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: OpenSSH_7.4p1, OpenSSL 1.0.2k-fips  26 Jan 2017\r\ndebug1: Reading configuration data /etc/ssh/ssh_config\r\ndebug1: /etc/ssh/ssh_config line 58: Applying options for *\r\ndebug1: auto-mux: Trying existing master\r\ndebug1: Control socket \"/home/navi/.ansible/cp/b3030f595a\" does not exist\r\ndebug2: resolving \"192.168.33.6\" port 22\r\ndebug2: ssh_connect_direct: needpriv 0\r\ndebug1: Connecting to 192.168.33.6 [192.168.33.6] port 22.\r\ndebug2: fd 3 setting O_NONBLOCK\r\ndebug1: connect to address 192.168.33.6 port 22: No route to host\r\nssh: connect to host 192.168.33.6 port 22: No route to host\r\n", 
+    "unreachable": true
+}
+2018-10-18 14:14:33,089 p=16978 u=navi |  ok: [centosvm]
+2018-10-18 14:14:33,198 p=16978 u=navi |  ok: [ubuntu_ldap]
+2018-10-18 14:14:33,758 p=16978 u=navi |  ok: [centosgui]
+2018-10-18 14:14:33,760 p=16978 u=navi |  META: ran handlers
+2018-10-18 14:14:33,846 p=16978 u=navi |  TASK [test hostvars] ****************************************************************************************************************************************
+2018-10-18 14:14:33,846 p=16978 u=navi |  task path: /home/navi/ansible_project/Master_ansible/variables/hostvars_demo.yml:4
+2018-10-18 14:14:34,199 p=16978 u=navi |  skipping: [centosvm] => {}
+2018-10-18 14:14:34,263 p=16978 u=navi |  skipping: [ubuntu_ldap] => {}
+2018-10-18 14:14:34,317 p=16978 u=navi |  ok: [centosgui] => {
+    "msg": [
+        "192.168.33.8", 
+        "10.0.2.15", 
+        "192.168.122.1"
+    ]
+}
+2018-10-18 14:14:34,320 p=16978 u=navi |  META: ran handlers
+2018-10-18 14:14:34,322 p=16978 u=navi |  META: ran handlers
+2018-10-18 14:14:34,328 p=16978 u=navi |  	to retry, use: --limit @/home/navi/ansible_project/Master_ansible/variables/hostvars_demo.retry
+
+2018-10-18 14:14:34,328 p=16978 u=navi |  PLAY RECAP **************************************************************************************************************************************************
+2018-10-18 14:14:34,328 p=16978 u=navi |  centosgui                  : ok=2    changed=0    unreachable=0    failed=0   
+2018-10-18 14:14:34,329 p=16978 u=navi |  centosvm                   : ok=1    changed=0    unreachable=0    failed=0   
+2018-10-18 14:14:34,329 p=16978 u=navi |  j2bb                       : ok=0    changed=0    unreachable=1    failed=0   
+2018-10-18 14:14:34,329 p=16978 u=navi |  ubuntu_ldap                : ok=1    changed=0    unreachable=0    failed=0   
+2018-10-18 14:15:04,451 p=17185 u=navi |  Using /home/navi/ansible_project/Master_ansible/variables/ansible.cfg as config file
+2018-10-18 14:15:05,258 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2018-10-18 14:15:05,271 p=17185 u=navi |  PLAY [all] **************************************************************************************************************************************************
+2018-10-18 14:15:05,309 p=17185 u=navi |  TASK [Gathering Facts] **************************************************************************************************************************************
+2018-10-18 14:15:08,101 p=17185 u=navi |  ok: [centosvm]
+2018-10-18 14:15:08,198 p=17185 u=navi |  ok: [ubuntu_ldap]
+2018-10-18 14:15:08,673 p=17185 u=navi |  ok: [centosgui]
+2018-10-18 14:15:08,734 p=17185 u=navi |  fatal: [j2bb]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.33.6 port 22: No route to host\r\n", "unreachable": true}
+2018-10-18 14:15:08,801 p=17185 u=navi |  TASK [test hostvars] ****************************************************************************************************************************************
+2018-10-18 14:15:09,127 p=17185 u=navi |  skipping: [centosvm] => {}
+2018-10-18 14:15:09,205 p=17185 u=navi |  skipping: [ubuntu_ldap] => {}
+2018-10-18 14:15:09,233 p=17185 u=navi |  ok: [centosgui] => {
+    "msg": [
+        "192.168.33.8", 
+        "10.0.2.15", 
+        "192.168.122.1"
+    ]
+}
+2018-10-18 14:15:09,244 p=17185 u=navi |  	to retry, use: --limit @/home/navi/ansible_project/Master_ansible/variables/hostvars_demo.retry
+
+2018-10-18 14:15:09,245 p=17185 u=navi |  PLAY RECAP **************************************************************************************************************************************************
+2018-10-18 14:15:09,245 p=17185 u=navi |  centosgui                  : ok=2    changed=0    unreachable=0    failed=0   
+2018-10-18 14:15:09,245 p=17185 u=navi |  centosvm                   : ok=1    changed=0    unreachable=0    failed=0   
+2018-10-18 14:15:09,245 p=17185 u=navi |  j2bb                       : ok=0    changed=0    unreachable=1    failed=0   
+2018-10-18 14:15:09,245 p=17185 u=navi |  ubuntu_ldap                : ok=1    changed=0    unreachable=0    failed=0   
+2018-10-18 14:15:12,445 p=17375 u=navi |  ansible-playbook 2.7.0
+  config file = /home/navi/ansible_project/Master_ansible/variables/ansible.cfg
+  configured module search path = [u'/home/navi/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Jul 13 2018, 13:06:57) [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+2018-10-18 14:15:12,445 p=17375 u=navi |  Using /home/navi/ansible_project/Master_ansible/variables/ansible.cfg as config file
+2018-10-18 14:15:13,181 p=17375 u=navi |  PLAYBOOK: hostvars_demo.yml *********************************************************************************************************************************
+2018-10-18 14:15:13,181 p=17375 u=navi |  1 plays in hostvars_demo.yml
+2018-10-18 14:15:13,270 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2018-10-18 14:15:13,283 p=17375 u=navi |  PLAY [all] **************************************************************************************************************************************************
+2018-10-18 14:15:13,306 p=17375 u=navi |  TASK [Gathering Facts] **************************************************************************************************************************************
+2018-10-18 14:15:13,307 p=17375 u=navi |  task path: /home/navi/ansible_project/Master_ansible/variables/hostvars_demo.yml:1
+2018-10-18 14:15:15,987 p=17375 u=navi |  ok: [centosvm]
+2018-10-18 14:15:16,121 p=17375 u=navi |  ok: [ubuntu_ldap]
+2018-10-18 14:15:16,583 p=17375 u=navi |  ok: [centosgui]
+2018-10-18 14:15:16,644 p=17375 u=navi |  fatal: [j2bb]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.33.6 port 22: No route to host\r\n", "unreachable": true}
+2018-10-18 14:15:16,647 p=17375 u=navi |  META: ran handlers
+2018-10-18 14:15:16,724 p=17375 u=navi |  TASK [test hostvars] ****************************************************************************************************************************************
+2018-10-18 14:15:16,724 p=17375 u=navi |  task path: /home/navi/ansible_project/Master_ansible/variables/hostvars_demo.yml:4
+2018-10-18 14:15:16,945 p=17375 u=navi |  skipping: [ubuntu_ldap] => {}
+2018-10-18 14:15:16,959 p=17375 u=navi |  skipping: [centosvm] => {}
+2018-10-18 14:15:17,125 p=17375 u=navi |  ok: [centosgui] => {
+    "msg": [
+        "192.168.33.8", 
+        "10.0.2.15", 
+        "192.168.122.1"
+    ]
+}
+2018-10-18 14:15:17,127 p=17375 u=navi |  META: ran handlers
+2018-10-18 14:15:17,128 p=17375 u=navi |  META: ran handlers
+2018-10-18 14:15:17,131 p=17375 u=navi |  	to retry, use: --limit @/home/navi/ansible_project/Master_ansible/variables/hostvars_demo.retry
+
+2018-10-18 14:15:17,131 p=17375 u=navi |  PLAY RECAP **************************************************************************************************************************************************
+2018-10-18 14:15:17,131 p=17375 u=navi |  centosgui                  : ok=2    changed=0    unreachable=0    failed=0   
+2018-10-18 14:15:17,131 p=17375 u=navi |  centosvm                   : ok=1    changed=0    unreachable=0    failed=0   
+2018-10-18 14:15:17,131 p=17375 u=navi |  j2bb                       : ok=0    changed=0    unreachable=1    failed=0   
+2018-10-18 14:15:17,132 p=17375 u=navi |  ubuntu_ldap                : ok=1    changed=0    unreachable=0    failed=0   
+2018-10-18 14:15:27,748 p=17573 u=navi |  ansible-playbook 2.7.0
+  config file = /home/navi/ansible_project/Master_ansible/variables/ansible.cfg
+  configured module search path = [u'/home/navi/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Jul 13 2018, 13:06:57) [GCC 4.8.5 20150623 (Red Hat 4.8.5-28)]
+2018-10-18 14:15:27,748 p=17573 u=navi |  Using /home/navi/ansible_project/Master_ansible/variables/ansible.cfg as config file
+2018-10-18 14:15:27,786 p=17573 u=navi |  Parsed /home/navi/ansible_project/Master_ansible/variables/inventory inventory source with ini plugin
+2018-10-18 14:15:28,592 p=17573 u=navi |  PLAYBOOK: hostvars_demo.yml *********************************************************************************************************************************
+2018-10-18 14:15:28,593 p=17573 u=navi |  1 plays in hostvars_demo.yml
+2018-10-18 14:15:28,706 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2018-10-18 14:15:28,727 p=17573 u=navi |  PLAY [all] **************************************************************************************************************************************************
+2018-10-18 14:15:28,762 p=17573 u=navi |  TASK [Gathering Facts] **************************************************************************************************************************************
+2018-10-18 14:15:28,764 p=17573 u=navi |  task path: /home/navi/ansible_project/Master_ansible/variables/hostvars_demo.yml:1
+2018-10-18 14:15:30,437 p=17573 u=navi |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-10-18 14:15:30,443 p=17573 u=navi |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-10-18 14:15:30,450 p=17573 u=navi |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2018-10-18 14:15:31,816 p=17573 u=navi |  ok: [centosvm]
+2018-10-18 14:15:31,922 p=17573 u=navi |  ok: [ubuntu_ldap]
+2018-10-18 14:15:32,316 p=17573 u=navi |  fatal: [j2bb]: UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.33.6 port 22: No route to host\r\n", 
+    "unreachable": true
+}
+2018-10-18 14:15:32,431 p=17573 u=navi |  ok: [centosgui]
+2018-10-18 14:15:32,436 p=17573 u=navi |  META: ran handlers
+2018-10-18 14:15:32,518 p=17573 u=navi |  TASK [test hostvars] ****************************************************************************************************************************************
+2018-10-18 14:15:32,519 p=17573 u=navi |  task path: /home/navi/ansible_project/Master_ansible/variables/hostvars_demo.yml:4
+2018-10-18 14:15:32,860 p=17573 u=navi |  skipping: [centosvm] => {}
+2018-10-18 14:15:32,926 p=17573 u=navi |  skipping: [ubuntu_ldap] => {}
+2018-10-18 14:15:32,949 p=17573 u=navi |  ok: [centosgui] => {
+    "msg": [
+        "192.168.33.8", 
+        "10.0.2.15", 
+        "192.168.122.1"
+    ]
+}
+2018-10-18 14:15:32,951 p=17573 u=navi |  META: ran handlers
+2018-10-18 14:15:32,952 p=17573 u=navi |  META: ran handlers
+2018-10-18 14:15:32,955 p=17573 u=navi |  	to retry, use: --limit @/home/navi/ansible_project/Master_ansible/variables/hostvars_demo.retry
+
+2018-10-18 14:15:32,956 p=17573 u=navi |  PLAY RECAP **************************************************************************************************************************************************
+2018-10-18 14:15:32,956 p=17573 u=navi |  centosgui                  : ok=2    changed=0    unreachable=0    failed=0   
+2018-10-18 14:15:32,956 p=17573 u=navi |  centosvm                   : ok=1    changed=0    unreachable=0    failed=0   
+2018-10-18 14:15:32,956 p=17573 u=navi |  j2bb                       : ok=0    changed=0    unreachable=1    failed=0   
+2018-10-18 14:15:32,957 p=17573 u=navi |  ubuntu_ldap                : ok=1    changed=0    unreachable=0    failed=0   
